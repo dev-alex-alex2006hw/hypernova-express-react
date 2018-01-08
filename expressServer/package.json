@@ -1,0 +1,16 @@
+{
+  "name": "client-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exampleServer.js",
+  "scripts": {
+    "start": "node exampleServer.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "hypernova-client": "^1.1.0"
+  }
+}

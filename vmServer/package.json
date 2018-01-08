@@ -1,0 +1,31 @@
+{
+  "name": "hypernova-simple-example",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A sample Rails application that uses Hypernova to server render.",
+  "license": "MIT",
+  "author": "Josh Perez <josh.perez@airbnb.com>",
+  "main": "hypernova.js",
+  "scripts": {
+    "build": "npm run format;npm run transpile ",
+    "format": "prettier --write \"remoteFunctions/**/*{.js, .json}\";./node_modules/sort-package-json/index.js ",
+    "start": "node hypernova.js",
+    "transpile": "babel \"remoteFunctions\" --out-dir \"build\" --copy-files --ignore \"node_modules\""
+  },
+  "dependencies": {
+    "hypernova": "git+https://github.com/alex-node/hypernova.git",
+    "hypernova-react": "^1.0.0",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2016": "^6.24.1",
+    "browserify": "^13.0.0",
+    "browserify-incremental": "^3.1.1",
+    "prettier": "^1.9.2",
+    "sort-package-json": "^1.7.1"
+  }
+}
