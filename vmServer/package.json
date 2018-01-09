@@ -8,6 +8,7 @@
   "main": "hypernova.js",
   "scripts": {
     "build": "npm run format;npm run transpile ",
+    "dev": "nodemon hypernova.js",
     "format": "prettier --write \"remoteFunctions/**/*{.js, .json}\";./node_modules/sort-package-json/index.js ",
     "start": "node hypernova.js",
     "transpile": "babel \"remoteFunctions\" --out-dir \"build\" --copy-files --ignore \"node_modules\""
@@ -25,6 +26,7 @@
     "babel-preset-es2016": "^6.24.1",
     "browserify": "^13.0.0",
     "browserify-incremental": "^3.1.1",
+    "nodemon": "^1.14.9",
     "prettier": "^1.9.2",
     "sort-package-json": "^1.7.1"
   }

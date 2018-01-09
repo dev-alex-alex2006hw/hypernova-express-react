@@ -1,4 +1,5 @@
 const express = require('express');
+
 const Renderer = require('hypernova-client');
 const devModePlugin = require('./plugins/devModePlugin');
 
@@ -20,3 +21,4 @@ app.get('/', (req, res) => {
 });
 
 app.listen(8080, () => console.log('Now listening'));
+ 

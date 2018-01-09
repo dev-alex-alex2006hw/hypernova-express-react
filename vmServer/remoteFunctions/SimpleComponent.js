@@ -3,30 +3,17 @@ import { renderReact } from "hypernova-react";
 
 let meme = 25;
 
-//function SimpleComponent({ name }) {
-//  return (
-//    <div onClick={() => alert("Click handlers work.")}>
-//      Hello, {meme++}, {name}!
-//    </div>
-//  );
-//}
-//
-//export default renderReact("SimpleComponent", SimpleComponent);
+const MyComponent = ({ name }) => {
+  return (
+    <div onClick={() => alert("Click handlers work.")}>
+      Hello, {meme++}, {name}!
+    </div>
+  );
+};
 
-const MyComponent = ({ name }) =>
-  //  renderReact("SimpleComponent", name =>
-  {
-    return (
-      <div onClick={() => alert("Click handlers work.")}>
-        Hello, {meme++}, {name}!
-      </div>
-    );
-  };
-//  );
+// patched version of hypernova to support both the following cases
+// export function by name
+export const SimpleComponent = renderReact("SimpleComponent", MyComponent);
 
-//export const SimpleComponent = renderReact("SimpleComponent", MyComponent);
-
-//export default SimpleComponent;
-
+// export single default function for component
 export default renderReact("SimpleComponent", MyComponent);
-//export default SimpleComponent;
